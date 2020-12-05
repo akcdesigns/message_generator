@@ -1,19 +1,16 @@
-const messages = {
-    randomStart: ['Hello ', 'you have a ', 'Hey, you have a ', 'Hi, you have a '],
-    randomMiddle: ['cool ', 'fashionable ', 'stylish '],
-    randomEnd: ['coat.', 'dress.', 'shirt.', 'skirt.', 'suit.', 'swimsuit.' ],
-};
+const randomStart = ['Hello ', 'you have a ', 'Hey, you have a ', 'Hi, you have a '];
+const randomMiddle = ['cool ', 'fashionable ', 'stylish '];
+const randomEnd = ['coat.', 'dress.', 'shirt.', 'skirt.', 'suit.', 'swimsuit.' ];
 
-const randomMessageGenerator = obj => {
+const messages = [randomStart, randomMiddle, randomEnd];
 
-    let object = obj[Object.keys(obj)[0]];
-    let randomSelectionArray = [];
-    // Getting random index number from start
-
-    
-
-} 
-
-console.log(randomMessageGenerator(messages));
+function randomMessageGenerator(arr) {
+   let randomMessage = [];
+    for (let i = 0; i < arr.length; i++) {
+        let x = arr[i];
+        randomMessage.push(x[Math.floor(Math.random() * x.length)]);
+    } 
+}
+randomMessageGenerator(messages);
 
 
