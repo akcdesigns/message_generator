@@ -10,7 +10,11 @@ function randomMessageGenerator(arr) {
         let x = arr[i];
         randomMessage.push(x[Math.floor(Math.random() * x.length)]);
     } 
+   let x = randomMessage.join('');
+   console.log(x);
 }
+
+
 randomMessageGenerator(messages);
 
 
